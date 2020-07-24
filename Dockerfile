@@ -83,6 +83,9 @@ done \n' \
     binutils \
     bzip2 \
     findutils \
+    gcc \
+    gcc-c++ \
+    gcc-gfortran \
     git \
     gzip \
     make \
