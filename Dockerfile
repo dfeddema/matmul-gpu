@@ -3,7 +3,7 @@
 
 # Install UBI 7.7 backed by lower priority RHEL 7 repos
 
-FROM nvidia/cuda:10.2-cudnn7-runtime-ubi7
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubi7
 
 WORKDIR /matmul-gpu-d
 
