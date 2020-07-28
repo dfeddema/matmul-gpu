@@ -7,12 +7,7 @@ FROM nvidia/cuda:10.2-cudnn7-runtime-ubi7
 
 WORKDIR /matmul-gpu-d
 
-ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
 ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_REQUIRE_CUDA=cuda>=9.2
-ENV NVIDIA_DRIVER_CAPABILITIES=compute,utility
-ENV CUDA_HOME /usr/local/cuda
-ENV PATH $PATH:$CUDA_HOME/bin
 
 RUN set -vx \
 \
