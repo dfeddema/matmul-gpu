@@ -22,7 +22,7 @@ with tf.device(device_name):
 
 
 startTime = datetime.now()
-with tf.compat.v1.Session(config=tf.ConfigProto(log_device_placement=True)) as session:
+with tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True)) as session:
         result = session.run(sum_operation)
         print(result)
 
