@@ -8,6 +8,8 @@ import numpy as np
 import tensorflow as tf
 from datetime import datetime
 
+tf.compat.v1.disable_eager_execution()
+
 device_name = sys.argv[1]  # Choose device from cmd line. Options: gpu or cpu
 shape = (int(sys.argv[2]), int(sys.argv[2]))
 if device_name == "gpu":
