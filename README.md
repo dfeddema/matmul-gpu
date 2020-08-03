@@ -1,4 +1,4 @@
-# Tekton Pipeline for a Sample Cuda Code on Openshift using GPUs
+# Tekton Pipeline for a Microbencharm that Runs a Sample Cuda Code on Openshift using GPUs
 
 A tekton pipeline that will build the image from Dockerfile, push the image to quay registry, pull that image and run the cuda code on GPU. Cuda code that is used here is the matrix multiplier one that was written by Diane Feddema from AICoE at Red Hat and modified by Selbi Nuryyeva to work with Tensorflow 2.X. Part of the pipeline yamls were adopted from [AICoE](https://github.com/AICoE/mlperf-tekton/tree/master/object_detection).
 
