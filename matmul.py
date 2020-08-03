@@ -1,6 +1,6 @@
 # Code written by: Diane Feddema dfeddema@redhat.com
 # modified for this project by Selbi Nuryyeva selbi@redhat.com
-# to run the code: python matrmul.py gpu 1500
+# to run the code: python matmul.py gpu 1500
 # can modify: gpu/cpu and shape of matrix (ie. 1500)
 
 import sys
