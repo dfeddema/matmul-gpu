@@ -1,4 +1,4 @@
-# matmul-gpu-d
+# matmul-gpu
 
 Requires at least Tensorflow 2.X
 
