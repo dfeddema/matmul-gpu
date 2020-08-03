@@ -136,17 +136,19 @@ Step `push` and `run` could be checked similarly. Remember that `run` step will 
 
 Once pipeline run is complete, check the logs of `run` step and at the end, it should look similar to this:
 ```bash
-DTYPE set to float32
-DEVICE set to cpu
-REPS set to 2000
-MATRIX size set to 512
-# Version: 2.2.0, path: ['/usr/local/lib/python3.8/site-packages/tensorflow', '/usr/local/lib/python3.8/site-packages/tensorflow_estimator/python/estimator/api/_v2', '/usr/local/lib/python3.8/site-packages/tensorboard/summary/_tf', '/usr/local/lib/python3.8/site-packages/tensorflow', 'usr/local/lib/python3.8/site-packages/tensorflow/_api/v2']
-512 x 512 matmul took:          3.5977 ms,      74.54 GFLOPS
+Shape: (1500, 1500) Device: /gpu:0
+Time taken: 0:00:02.346886
 ```
 The pipeline-run has been completed! All tasks, pipelinerources, pipeline, pipeline-run and pvc can then be deleted if not needed anymore. ie:
 ```bash
 oc delete tasks --all -n matmul
 ```
+
+To perform further benchmarks, the shape of the matrix can be modified by changing the number in the following line in 'full-pipeline.yaml' under 'mm-run' Task:
+```
+command: ["python3", "matmul.py", "gpu", "1500"]
+```
+
 
 ## Contributing
 Pull requests are welcome.
