@@ -5,7 +5,7 @@
 
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubi7
 
-WORKDIR /matmul-gpu-d
+WORKDIR /matmul-gpu
 
 ENV NVIDIA_VISIBLE_DEVICES all
 
@@ -236,7 +236,7 @@ fi \
 
 EXPOSE 6006
 
-ADD . /matmul-gpu-d
+ADD . /matmul-gpu
 
 RUN cat /usr/local/cuda/version.txt 
 
