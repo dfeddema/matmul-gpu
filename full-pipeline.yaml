@@ -7,7 +7,7 @@ spec:
   type: git
   params:
     - name: url
-      value: https://github.com/heyselbi/matmul-gpu-d.git
+      value: https://github.com/heyselbi/matmul-gpu.git
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
@@ -17,7 +17,7 @@ spec:
   type: image
   params:
     - name: url
-      value: quay.io/selbi/matmul-gpu-d
+      value: quay.io/selbi/matmul-gpu
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -93,7 +93,7 @@ spec:
   steps:
     - name: run
       image: $(inputs.resources.image.url)
-      workingDir: /matmul-gpu-d
+      workingDir: /matmul-gpu
       env:
         - name: NVIDIA_VISIBLE_DEVICES
           value: all
