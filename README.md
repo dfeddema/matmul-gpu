@@ -35,7 +35,7 @@ oc new-project matmul
 Fork this repository on own Github account and then clone it into local machine where pipelines would be running. Please remember to change *username* to own:
 
 ```git
-git clone https://github.com/username/matmul.git
+git clone https://github.com/username/matmul-gpu.git
 ```
 Create a service account called "matmul":
 ```bash
