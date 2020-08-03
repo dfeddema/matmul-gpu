@@ -144,7 +144,7 @@ The pipeline-run has been completed! All tasks, pipelinerources, pipeline, pipel
 oc delete tasks --all -n matmul
 ```
 
-To perform further benchmarks, the shape of the matrix can be modified by changing the number in the following line in 'full-pipeline.yaml' under 'mm-run' Task:
+To perform further benchmarks, the shape of the matrix can be modified by changing the number in the following line in `full-pipeline.yaml` under `mm-run` Task:
 ```
 command: ["python3", "matmul.py", "gpu", "1500"]
 ```
