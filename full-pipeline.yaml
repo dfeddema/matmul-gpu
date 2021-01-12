@@ -7,7 +7,7 @@ spec:
   type: git
   params:
     - name: url
-      value: https://github.com/heyselbi/matmul-gpu.git
+      value: https://github.com/dfeddema/matmul-gpu.git
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
@@ -17,7 +17,7 @@ spec:
   type: image
   params:
     - name: url
-      value: quay.io/selbi/matmul-gpu
+      value: quay.io/dfeddema/matmul-gpu
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -109,9 +109,7 @@ spec:
           mountPath: /dev/shm
       securityContext:
         privileged: true
-        seLinuxOptions:
-          type: nvidia_container_t
-      command: ["python3", "matmul.py", "gpu", "1500"]
+      command: ["python3", "matmul.py", "cpu", "1500"]
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: Pipeline

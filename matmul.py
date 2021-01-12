@@ -13,11 +13,11 @@ tf.compat.v1.disable_eager_execution()
 device_name = sys.argv[1]  # Choose device from cmd line. Options: gpu or cpu
 shape = (int(sys.argv[2]), int(sys.argv[2]))
 if device_name == "gpu":
-    device_name = "/gpu:0"
+    device_name = "/GPU:0"
 else:
-    device_name = "/cpu:0"
+    device_name = "/CPU:0"
 
-with tf.device(device_name):
+# with tf.device('/GPU:0'):
     random_matrix = tf.random.uniform(shape=shape, minval=0, maxval=1)
     dot_operation = tf.matmul(random_matrix, tf.transpose(random_matrix))
     sum_operation = tf.reduce_sum(dot_operation)
